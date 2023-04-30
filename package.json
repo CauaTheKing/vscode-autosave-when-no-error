@@ -1,11 +1,69 @@
 {
-  "name": "vscode-autosave-public",
-  "version": "1.2.3",
-  "description": "![Visual Studio Marketplace Installs - Azure DevOps Extension](https://img.shields.io/visual-studio-marketplace/azure-devops/installs/total/codista.vscode-autosave) ![Visual Studio Marketplace Release Date](https://img.shields.io/visual-studio-marketplace/release-date/codista.vscode-autosave)",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+    "name": "vscode-autosave",
+    "displayName": "VSCode AutoSave",
+    "description": "Save a file whenever there are no errors.",
+    "version": "1.2.3",
+    "icon": "images/logo.png",
+    "publisher": "codista",
+    "repository": {
+        "url": "https://github.com/CB0rghi/vscode-autosave-ext"
+    },
+    "engines": {
+        "vscode": "^1.71.0"
+    },
+    "contributes": {
+        "configuration": {
+            "title": "VSCode AutoSave",
+            "properties": {
+                "vscode-autosave.debounceMs": {
+                    "type": "number",
+                    "default": 700,
+                    "description": "How much time of idle before saving the file."
+                },
+                "vscode-autosave.disableProgressNotifications": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Disable progress notification pop-ups"
+                }
+            }
+        }
+    },
+    "categories": [
+        "Other"
+    ],
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./extension.js",
+    "scripts": {
+        "lint": "eslint .",
+        "pretest": "yarn run lint",
+        "test": "node ./test/runTest.js"
+    },
+    "devDependencies": {
+        "@types/glob": "^7.2.0",
+        "@types/mocha": "^9.1.1",
+        "@types/node": "16.x",
+        "@types/vscode": "^1.71.0",
+        "@vscode/test-electron": "^2.1.5",
+        "eslint": "^8.20.0",
+        "glob": "^8.0.3",
+        "mocha": "^10.0.0",
+        "typescript": "^4.7.4"
+    },
+    "dependencies": {
+        "@vscode/extension-telemetry": "^0.6.2",
+        "applicationinsights": "^2.3.5",
+        "lodash": "^4.17.21"
+    },
+    "__metadata": {
+        "id": "2e577792-e46a-49c8-8584-fb2546b8eb56",
+        "publisherId": "0bcdf5cc-ef27-4583-83f9-ba0447cbbd3d",
+        "publisherDisplayName": "codista",
+        "targetPlatform": "undefined",
+        "updated": false,
+        "isPreReleaseVersion": false,
+        "installedTimestamp": 1682865281876,
+        "preRelease": false
+    }
 }
