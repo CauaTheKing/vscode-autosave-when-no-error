@@ -1,6 +1,6 @@
 # VSCode AutoSave (AutoSave changing window added)
 
-<a href="https://www.buymeacoffee.com/codista" target="_blank"><img src="./images/buy_codista_a_coffee.png"
+<a href="https://www.buymeacoffee.com/codista" target="_blank"><img src="https://github.com/CauaTheKing/vscode-autosave-when-no-error/raw/main/images/buy_codista_a_coffee.png"
 alt="Buy Codista a coffee"
 title="Buy Codista a coffee"
 style="width: 217px !important;" ></a>
@@ -8,7 +8,7 @@ style="width: 217px !important;" ></a>
 
 <br>
 
-<img src="./images/paypal_donation.png"
+<img src="https://github.com/CauaTheKing/vscode-autosave-when-no-error/raw/main/images/paypal_donation.png"
 alt="Donate to Caua_SCP through PayPal (Header)"
 title="Donate to Caua_SCP through PayPal (Header)"
 style="width: 217px !important;"></img>
@@ -17,7 +17,7 @@ style="width: 217px !important;"></img>
 title="Donate to Caua_SCP through PayPal (Click Here)"
 style="height: 60px !important" ></a>
 
-<img src="./images/paypal_cards.png"
+<img src="https://github.com/CauaTheKing/vscode-autosave-when-no-error/raw/main/images/paypal_cards.png"
 alt="PayPal Usable Cards"
 title="PayPal Usable Cards"
 style="width: 217px !important;"></img>

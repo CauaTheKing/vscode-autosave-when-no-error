@@ -2,11 +2,11 @@
     "name": "cau-vscode-autosave",
     "displayName": "VSCode AutoSave (Window Changed Included)",
     "description": "Save a file whenever there are no errors.",
-    "version": "1.2.3",
+    "version": "1.3.1",
     "icon": "images/logo.png",
-    "publisher": "codista",
+    "publisher": "Caua_SCP (based on original work by codista)",
     "repository": {
-        "url": "https://github.com/CauaTheKing/vscode-autosave-when-no-error"
+        "url": "https://github.com/CauaTheKing/vscode-autosave-when-no-error.git"
     },
     "engines": {
         "vscode": "^1.71.0"
@@ -17,7 +17,7 @@
             "properties": {
                 "cau-vscode-autosave.debounceMs": {
                     "type": "number",
-                    "default": 700,
+                    "default": 1150,
                     "description": "How much time of idle before saving the file."
                 },
                 "cau-vscode-autosave.onWindowChanged": {

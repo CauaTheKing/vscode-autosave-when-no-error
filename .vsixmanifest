@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 	<PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
 		<Metadata>
-			<Identity Language="en-US" Id="vscode-autosave" Version="1.2.3" Publisher="codista" />
-			<DisplayName>VSCode AutoSave</DisplayName>
+			<Identity Language="en-US" Id="cau-vscode-autosave" Version="1.3.1" Publisher="Caua_SCP (based on original work by codista)" />
+			<DisplayName>VSCode AutoSave (Window Changed Included)</DisplayName>
 			<Description xml:space="preserve">Save a file whenever there are no errors.</Description>
 			<Tags></Tags>
 			<Categories>Other</Categories>
@@ -39,8 +39,8 @@
 		<Assets>
 			<Asset Type="Microsoft.VisualStudio.Code.Manifest" Path="extension/package.json" Addressable="true" />
 			<Asset Type="Microsoft.VisualStudio.Services.Content.Details" Path="extension/README.md" Addressable="true" />
-<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
-<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.md" Addressable="true" />
-<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/images/logo.png" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.Changelog" Path="extension/CHANGELOG.md" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Content.License" Path="extension/LICENSE.md" Addressable="true" />
+			<Asset Type="Microsoft.VisualStudio.Services.Icons.Default" Path="extension/images/logo.png" Addressable="true" />
 		</Assets>
 	</PackageManifest>

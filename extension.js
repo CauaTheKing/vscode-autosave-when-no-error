@@ -2,8 +2,10 @@ const vscode = require("vscode");
 const { handleDocumentEdit } = require("./src/documentManager");
 const { track, TRACKED_ACTIONS } = require("./src/tracker");
 const fs = require("fs");
+const path = require("path");
 
 const configs = vscode.workspace.getConfiguration("cau-vscode-autosave");
+const windowsBlacklistJSONFile = path.resolve(__dirname, "./windows_blacklist.json");
 
 var globalContext = null;
 /**
@@ -33,22 +35,22 @@ async function activate(context) {
     );
 
     try {
-        fs.writeFile("./windows_blacklist.json", JSON.stringify(windowsBlacklistArray, null, 4));
+        fs.writeFile(windowsBlacklistJSONFile, JSON.stringify(windowsBlacklistArray, null, 4));
     } catch (error) {
         console.warn(error);
     }
 
-    windowsBlacklistString = windowsBlacklistString + '"';
-
     if (windowsBlacklistArray.length == 1 && (windowsBlacklistArray[0] === "CODE" || windowsBlacklistArray[0] === "VSCODE")) {
         windowsBlacklistString = '"CODE",';
+    } else {
+        windowsBlacklistString = windowsBlacklistString + '"';
     }
 
     await configs.update("windowsBlacklist", windowsBlacklistString, vscode.ConfigurationTarget.Global);
 
     globalContext = context;
 
-    fs.readFile("./windows_blacklist.json", "utf8", function (err, data) {
+    fs.readFile(windowsBlacklistJSONFile, "utf8", function (err, data) {
         if (err) {
             console.warn(err);
             return { "error": err }; // prettier-ignore
