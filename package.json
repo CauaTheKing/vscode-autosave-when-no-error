@@ -1,12 +1,12 @@
 {
-    "name": "vscode-autosave",
-    "displayName": "VSCode AutoSave",
+    "name": "cau-vscode-autosave",
+    "displayName": "VSCode AutoSave (Window Changed Included)",
     "description": "Save a file whenever there are no errors.",
     "version": "1.2.3",
     "icon": "images/logo.png",
     "publisher": "codista",
     "repository": {
-        "url": "https://github.com/CB0rghi/vscode-autosave-ext"
+        "url": "https://github.com/CauaTheKing/vscode-autosave-when-no-error"
     },
     "engines": {
         "vscode": "^1.71.0"
@@ -15,15 +15,25 @@
         "configuration": {
             "title": "VSCode AutoSave",
             "properties": {
-                "vscode-autosave.debounceMs": {
+                "cau-vscode-autosave.debounceMs": {
                     "type": "number",
                     "default": 700,
                     "description": "How much time of idle before saving the file."
                 },
-                "vscode-autosave.disableProgressNotifications": {
+                "cau-vscode-autosave.onWindowChanged": {
                     "type": "boolean",
                     "default": false,
-                    "description": "Disable progress notification pop-ups"
+                    "description": "Saves the Files when Window is Changed."
+                },
+                "cau-vscode-autosave.windowsBlacklist": {
+                    "type": "string",
+                    "default": "\"CODE\",",
+                    "description": "Blacklist of Apps Names that don't Make Files Save when Window is Changed example: '\"Task Manager\", \"Notepad\"' (without single quotes)."
+                },
+                "cau-vscode-autosave.disableProgressNotifications": {
+                    "type": "boolean",
+                    "default": true,
+                    "description": "Disable progress notification pop-ups."
                 }
             }
         }
@@ -54,7 +64,8 @@
     "dependencies": {
         "@vscode/extension-telemetry": "^0.6.2",
         "applicationinsights": "^2.3.5",
-        "lodash": "^4.17.21"
+        "lodash": "^4.17.21",
+        "node-active-window": "^0.1.0"
     },
     "__metadata": {
         "id": "2e577792-e46a-49c8-8584-fb2546b8eb56",

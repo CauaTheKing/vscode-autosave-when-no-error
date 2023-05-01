@@ -1138,6 +1138,11 @@ natural-compare@^1.4.0:
   resolved "https://registry.yarnpkg.com/natural-compare/-/natural-compare-1.4.0.tgz#4abebfeed7541f2c27acfb29bdbbd15c8d5ba4f7"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
+node-active-window@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/node-active-window/-/node-active-window-0.1.0.tgz#b1a5e48c5d3168b525f85bf9459c0c2cfe2ab433"
+  integrity sha512-VBqNHiiNF5aXw3tUPHIqQbbAqwrTWwe+SyRmv5q18mi1LvYC4toNu1xBTn98ijL1BApd4vlU/4MbPpsbWX79PQ==
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
